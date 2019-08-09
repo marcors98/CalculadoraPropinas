@@ -17,8 +17,26 @@ class ViewController: UIViewController {
     @IBOutlet weak var txtTotalSinPropina: UITextField!
     
     
-    //cometario
     @IBAction func doChangeValores(_ sender: Any) {
+        
+        
+        var porcentajePropina = 0.0
+        porcentajePropina = Double(slsPorcentajePropina.value)
+        porcentajePropina.round()
+        lblPorcentajePropina.text = "\(porcentajePropina)%"
+        porcentajePropina = porcentajePropina / 100.0
+        
+        
+        var cantidadPropina = 0.0
+        cantidadPropina = Double(txtTotalSinPropina.text!)! *
+            porcentajePropina
+        
+        
+        lblTotalPropina.text = "\(cantidadPropina)"
+        
+        let totalConPropina = Double(txtTotalSinPropina.text!)! + cantidadPropina
+        lblTotalConPropina.text = "$\(totalConPropina)"
+        
     }
     
     
