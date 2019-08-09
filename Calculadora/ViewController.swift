@@ -17,7 +17,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var txtTotalSinPropina: UITextField!
     
     
-    
+    //cometario
     @IBAction func doChangeValores(_ sender: Any) {
     }
     
